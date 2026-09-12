@@ -1,21 +1,21 @@
 import Logo from "../assets/logo-text.png"
 const Navbar = () =>{
     return(
-        <div className=" border-b-gray-300">
+        <div className=" border-b border-gray-100">
 
         <nav className="flex justify-between gap-4 container mx-auto py-4">
         <img src={Logo}className="w-[150px] h-[40px]"alt="" />
         <ul className="flex gap-4 items-center">
-            <li className=" text-color">Home</li>
-            <li>Technologies</li>
-            <li>Project</li>
-            <li>about</li>
-            <li>Contact</li>
+            <li className="text-[#D91B7E]"><a href="/">Home</a></li>
+            <li ><a href="/">Technologies</a></li>
+            <li ><a href="/">Projects</a></li>
+            <li ><a href="/">About</a></li>
+            <li ><a href="/">Contact</a></li>
         </ul>
 
         <div>
-            <button className=" text-white px-4 rounded-md">Sign In</button>
-            <button className="bg-fuchsia-500 text-white px-4 py-2 rounded-3xl hover:bg-fuchsia-800 hover:scale-105 transition-transform duration-300">Sign Up</button>
+            <button className=" px-4 rounded-md"><a href="/">Sign In</a></button>
+            <button className="bg-[#D91B7E] text-white px-4 py-2 rounded-3xl hover:bg-pink-700 hover:scale-105 transition-transform duration-300"><a href="/">Sign Up</a></button>
         </div>
     </nav>
     </div>
