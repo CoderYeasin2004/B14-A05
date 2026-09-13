@@ -7,6 +7,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import type { Itechnology } from "./types/technologiesType";
+import Footer from "./component/technologies/Footer";
 
 const technologiesFetch = async (): Promise<Itechnology[]> => {
   const res = await fetch("./data.json");
@@ -20,17 +21,18 @@ const App = () => {
   return (
     <>
       <Navbar />
-
       <Hero />
 
       <Suspense fallback={<></>}>
         <Technologies technologiesPromise={technologiesPromise} />
       </Suspense>
-
+      
+      <Footer />
       <ToastContainer
         position="top-right"
         autoClose={2000}
       />
+      
     </>
   );
 };

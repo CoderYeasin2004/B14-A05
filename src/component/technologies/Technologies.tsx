@@ -107,6 +107,7 @@ useEffect(() => {
             onRemoveTechnology={handleRemoveTechnology}
             onRemoveAll={handleRemoveAll}
           />
+
         </div>
       </div>
     </div>
