@@ -6,7 +6,9 @@
     "level": "Beginner-Friendly",
     "rating": 4.9,
     "badge": "Popular",
-    "icon": "⚛️"
+    "badgeBg": "#EFF6FF",
+    "badgeText": "#3B82F6",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original-wordmark.svg"
   },
   {
     "name": "Vue.js",
@@ -14,8 +16,10 @@
     "description": "An approachable, performant, and versatile framework for building web user interfaces.",
     "level": "Beginner-Friendly",
     "rating": 4.8,
-    "badge": "Popular",
-    "icon": "💚"
+    "badge": "Versatile",
+    "badgeBg": "#D1FAE5",
+    "badgeText": "#059669",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg"
   },
   {
     "name": "Svelte",
@@ -23,8 +27,10 @@
     "description": "A compiler-based approach to building fast web applications with minimal runtime overhead.",
     "level": "Intermediate",
     "rating": 4.8,
-    "badge": "Modern",
-    "icon": "🔥"
+    "badge": "Fast",
+    "badgeBg": "#FEDAC7",
+    "badgeText": "#FF3E00",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/svelte/svelte-original.svg"
   },
   {
     "name": "Next.js",
@@ -32,8 +38,7 @@
     "description": "A React framework for full-stack web applications with server-side rendering and static generation.",
     "level": "Intermediate",
     "rating": 4.9,
-    "badge": "Popular",
-    "icon": "▲"
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg"
   },
   {
     "name": "Node.js",
@@ -42,7 +47,9 @@
     "level": "Intermediate",
     "rating": 4.8,
     "badge": "Standard",
-    "icon": "🟢"
+    "badgeBg": "#D1FAE5",
+    "badgeText": "#059669",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg"
   },
   {
     "name": "PostgreSQL",
@@ -51,7 +58,9 @@
     "level": "Intermediate",
     "rating": 4.9,
     "badge": "Top SQL",
-    "icon": "🐘"
+    "badgeBg": "#EFF6FF",
+    "badgeText": "#3B82F6",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg"
   },
   {
     "name": "Redis",
@@ -60,7 +69,9 @@
     "level": "Intermediate",
     "rating": 4.8,
     "badge": "Cache",
-    "icon": "🔴"
+    "badgeBg": "#E6C5C3",
+    "badgeText": "#A41E11",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg"
   },
   {
     "name": "JavaScript",
@@ -69,7 +80,9 @@
     "level": "Beginner-Friendly",
     "rating": 4.9,
     "badge": "Ubiquitous",
-    "icon": "JS"
+    "badgeBg": "#FEF3C7",
+    "badgeText": "#E89537",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
   },
   {
     "name": "TypeScript",
@@ -78,33 +91,41 @@
     "level": "Intermediate",
     "rating": 4.9,
     "badge": "Essential",
-    "icon": "TS"
+    "badgeBg": "#EFF6FF",
+    "badgeText": "#3B82F6",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
   },
   {
     "name": "Java",
     "category": "Language",
     "description": "A secure, object-oriented programming language designed for portability and scale.",
     "level": "Intermediate",
-    "rating": 4.8,
+    "rating": 4.6,
     "badge": "Robust",
-    "icon": "☕"
+    "badgeBg": "#EFF6FF",
+    "badgeText": "#3B82F6",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
   },
   {
     "name": "Tailwind CSS",
     "category": "Frontend",
     "description": "A utility-first CSS framework packed with classes that can be composed to build custom UI.",
     "level": "Beginner-Friendly",
-    "rating": 4.8,
+    "rating": 4.9,
     "badge": "Modern",
-    "icon": "🌊"
+    "badgeBg": "#ACD4E5",
+    "badgeText": "#0891B2",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
   },
   {
     "name": "Docker",
     "category": "DevOps",
     "description": "A platform designed to build, share, and run containerized applications reliably.",
     "level": "Intermediate",
-    "rating": 4.8,
+    "rating": 4.9,
     "badge": "Containers",
-    "icon": "🐳"
+    "badgeBg": "#EFF6FF",
+    "badgeText": "#3B82F6",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg"
   }
 ]

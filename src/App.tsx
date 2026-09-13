@@ -1,25 +1,38 @@
 import Navbar from "./component/nav";
 import Hero from "./component/hero";
-import Technologies from "./component/technologies";
+import Technologies from "./component/technologies/technologies";
+
 import { Suspense } from "react";
-import type { Itechnology } from "./types/technolgiesType";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
+import type { Itechnology } from "./types/technologiesType";
 
-    const technologiesFetch = async():Promise<Itechnology[]> => {
-        const res = await fetch('./data.json')
-        const data = await res.json();
-        return data;
-    }
+const technologiesFetch = async (): Promise<Itechnology[]> => {
+  const res = await fetch("./data.json");
+  const data = await res.json();
+  return data;
+};
 
- const App =() => {
-    const technologiesPromise = technologiesFetch();
+const technologiesPromise = technologiesFetch();
+
+const App = () => {
   return (
     <>
-    <Navbar/>
-    <Hero/> 
-    <Suspense fallback={<></>}><Technologies technologiesPromise={technologiesPromise}/></Suspense>
-    <Technologies technologiesPromise={technologiesPromise}/>
+      <Navbar />
+
+      <Hero />
+
+      <Suspense fallback={<></>}>
+        <Technologies technologiesPromise={technologiesPromise} />
+      </Suspense>
+
+      <ToastContainer
+        position="top-right"
+        autoClose={2000}
+      />
     </>
-  )
-}
+  );
+};
+
 export default App;

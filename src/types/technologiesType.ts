@@ -6,4 +6,6 @@ export interface Itechnology {
   rating: number;
   badge: string;
   icon: string;
+  badgeBg: string;
+  badgeText: string;
 }
