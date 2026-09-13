@@ -1,6 +1,6 @@
 import Navbar from "./component/nav";
 import Hero from "./component/hero";
-import Technologies from "./component/technologies/technologies";
+import Technologies from "./component/technologies/Technologies";
 
 import { Suspense } from "react";
 import { ToastContainer } from "react-toastify";
@@ -26,7 +26,7 @@ const App = () => {
       <Suspense fallback={<></>}>
         <Technologies technologiesPromise={technologiesPromise} />
       </Suspense>
-      
+
       <Footer />
       <ToastContainer
         position="top-right"
