@@ -1,4 +1,4 @@
-import { use, useState } from "react";
+import { use, useState, useEffect } from "react";
 import { toast } from "react-toastify";
 
 import type { Itechnology } from "../../types/technologiesType";
@@ -15,8 +15,25 @@ const Technologies = ({
 }: TechnologiesProps) => {
   const technologies = use(technologiesPromise);
 
-  const [selectedTechnologies, setSelectedTechnologies] =
-    useState<Itechnology[]>([]);
+  const [selectedTechnologies, setSelectedTechnologies] = useState<
+  Itechnology[]
+>(() => {
+  try {
+    const savedTechnologies = localStorage.getItem("selectedTechnologies");
+
+    return savedTechnologies
+      ? (JSON.parse(savedTechnologies) as Itechnology[])
+      : [];
+  } catch {
+    return [];
+  }
+});
+useEffect(() => {
+  localStorage.setItem(
+    "selectedTechnologies",
+    JSON.stringify(selectedTechnologies)
+  );
+}, [selectedTechnologies]);
 
   // Add technology
   const handleAddTechnology = (technology: Itechnology) => {
