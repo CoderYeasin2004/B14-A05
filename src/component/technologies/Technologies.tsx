@@ -101,7 +101,7 @@ useEffect(() => {
         </div>
 
         {/* Your Stack */}
-        <div className="w-full lg:w-[220px] lg:flex-none">
+        <div className="w-full self-start lg:sticky lg:top-24 lg:w-[220px] lg:flex-none">
           <YourStack
             selectedTechnologies={selectedTechnologies}
             onRemoveTechnology={handleRemoveTechnology}

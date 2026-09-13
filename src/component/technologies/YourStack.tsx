@@ -14,27 +14,17 @@ const YourStack = ({
   return (
     <div className="w-full rounded-xl border border-slate-200 bg-white p-4">
       {/* Header */}
-      <div className="flex items-center justify-between">
+      <div>
         <h2 className="font-semibold text-slate-900">
           Your Stack
         </h2>
 
-        {selectedTechnologies.length > 0 && (
-          <button
-            onClick={onRemoveAll}
-            className="text-[10px] font-medium text-red-500 hover:text-red-600"
-          >
-            Remove All
-          </button>
-        )}
+        <p className="mt-1 text-xs text-slate-400">
+          {selectedTechnologies.length === 0
+            ? "No technologies selected yet"
+            : `${selectedTechnologies.length} Technology Selected`}
+        </p>
       </div>
-
-      {/* Count */}
-      <p className="mt-1 text-xs text-slate-400">
-        {selectedTechnologies.length === 0
-          ? "No technologies selected yet"
-          : `${selectedTechnologies.length} Technology Selected`}
-      </p>
 
       {/* Empty State */}
       {selectedTechnologies.length === 0 && (
@@ -47,34 +37,50 @@ const YourStack = ({
 
       {/* Selected Technologies */}
       {selectedTechnologies.length > 0 && (
-        <div className="mt-4 space-y-2">
-          {selectedTechnologies.map((technology) => (
-            <div
-              key={technology.name}
-              className="flex items-center justify-between rounded-md border border-slate-100 p-2"
-            >
-              <div className="flex items-center gap-2">
-                <img
-                  src={technology.icon}
-                  alt={technology.name}
-                  className="h-5 w-5 object-contain"
-                />
-
-                <span className="text-xs font-medium text-slate-700">
-                  {technology.name}
-                </span>
-              </div>
-
-              <button
-                onClick={() => onRemoveTechnology(technology.name)}
-                className="text-xs text-red-400 hover:text-red-600"
-                title={`Remove ${technology.name}`}
+        <>
+          <div className="mt-3 space-y-2">
+            {selectedTechnologies.map((technology) => (
+              <div
+                key={technology.name}
+                className="flex items-center justify-between rounded-md border border-slate-200 p-2"
               >
-                ×
-              </button>
-            </div>
-          ))}
-        </div>
+                <div className="flex items-center gap-2">
+                  <img
+                    src={technology.icon}
+                    alt={technology.name}
+                    className="h-6 w-6 object-contain"
+                  />
+
+                  <div>
+                    <p className="text-[11px] font-semibold text-slate-800">
+                      {technology.name}
+                    </p>
+
+                    <p className="text-[9px] text-slate-400">
+                      {technology.category}
+                    </p>
+                  </div>
+                </div>
+
+                <button
+                  onClick={() => onRemoveTechnology(technology.name)}
+                  className="text-lg leading-none text-slate-400 hover:text-slate-600"
+                  title={`Remove ${technology.name}`}
+                >
+                  ×
+                </button>
+              </div>
+            ))}
+          </div>
+
+          {/* Remove All - Bottom */}
+          <button
+            onClick={onRemoveAll}
+            className="mt-9 w-full rounded-md border border-red-300 py-1.5 text-xs font-medium text-red-500 transition hover:bg-red-50"
+          >
+            Remove All
+          </button>
+        </>
       )}
     </div>
   );
